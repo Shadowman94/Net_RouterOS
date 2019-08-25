@@ -301,7 +301,7 @@ class Client
                 'response',
                 '00' . md5(
                     chr(0) . $password
-                    . pack('H*', stream_get_contents($response->getProperty('ret'))
+                    . pack('H*', stream_get_contents($response->getProperty('ret')))
                 )
             );
             $request->verify($com)->send($com);
